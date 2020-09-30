@@ -48,7 +48,7 @@ For example:
 }
 
 ```
-2. Add tge following code under a`[[roam/css]]`code block and make sure to select `css`.
+2. Add the following code under a`[[roam/css]]`code block and make sure to select `css`.
 ```css
 .sidebar-content > *:not(.rm-dnd-separator) > div:not(.rm-dnd-separator) > div:first-child:not(:last-child) {
     min-width: var(--page-side-width);
