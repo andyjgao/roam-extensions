@@ -1,6 +1,6 @@
 # Roam Extensions by andyga0:
 
-The following are a list of extensions to extend functionality inside of Roam.
+The following are a list of extensions to extend functionality inside of Roam. The code is open-sourced. Feel free to change, modify, update as you wish.
 
 To run any of the RoamJS extensions, you must first do the following:
 
