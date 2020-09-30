@@ -58,7 +58,7 @@ For example:
 }
 
 ```
-2. Nest the following code under a  `{{[[roam/js]]}}` codeblock:
+3. Nest the following code under a  `{{[[roam/js]]}}` codeblock:
 ```js
 var s = document.createElement('script')
 s.type = "text/javascript"
