@@ -20,7 +20,7 @@ To run any of the RoamJS extensions, you must first do the following:
 
 **Installation:**
 
-1. Add the `--page-side-width` and `--page-width` variables inside root selector under `[[roam/css]]` Zenith theme and the following code into `[[roam/css]]`.
+1. Add the `--page-side-width` and `--page-width` variables inside root selector under `[[roam/css]]` Zenith theme 
 For example: 
 ```css
 :root {	
@@ -46,6 +46,10 @@ For example:
 
     --color-secondary-contrast: #FFFFFF;	
 }
+
+```
+2. Add tge following code under a`[[roam/css]]`code block and make sure to select `css`.
+```css
 .sidebar-content > *:not(.rm-dnd-separator) > div:not(.rm-dnd-separator) > div:first-child:not(:last-child) {
     min-width: var(--page-side-width);
 }
