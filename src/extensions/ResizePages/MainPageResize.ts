@@ -12,12 +12,12 @@ export const MainPageResize = () => {
     await createResizeDiv(
       document.querySelector(".roam-article"),
       "roam-page-width-resize",
-      10
+      35
     );
 
     await runListeners(
       ".roam-page-width-resize",
-      addMouseMoveListener(".roam-page-width-resize", 10, resizePageWidth),
+      addMouseMoveListener(".roam-page-width-resize", 35, resizePageWidth),
       resizePageWidth
     );
   };

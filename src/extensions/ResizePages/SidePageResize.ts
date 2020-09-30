@@ -14,7 +14,7 @@ export const SidePageResize = () => {
 
     runListeners(
       resizeComponent,
-      addMouseMoveListener(resizeComponent, 10, resizeSidePageWidth),
+      addMouseMoveListener(resizeComponent, 25, resizeSidePageWidth),
       resizeSidePageWidth
     );
   };
@@ -22,7 +22,7 @@ export const SidePageResize = () => {
   waitForAddedNode({
     id: "roam-right-sidebar-content",
     parent: document.getElementById("right-sidebar"),
-    recursive: true,
+    recursive: false,
     done: sidePageCallback,
   });
 };
