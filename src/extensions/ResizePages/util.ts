@@ -33,7 +33,6 @@ export const addMouseMoveListener = (
     const queriedSelector = document.querySelector(selector);
     if ((queriedSelector as HTMLElement).offsetWidth - triggerX <= e.offsetX) {
       window.m_pos = e.x;
-      console.log(window.m_pos);
       window.addEventListener("mousemove", resize);
     }
   };
