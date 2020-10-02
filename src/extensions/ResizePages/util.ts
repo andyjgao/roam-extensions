@@ -33,7 +33,7 @@ export const addMouseMoveListener = (
     const queriedSelector = document.querySelector(selector);
     if ((queriedSelector as HTMLElement).offsetWidth - triggerX <= e.offsetX) {
       window.m_pos = e.x;
-      window.addEventListener("mousemove", resize);
+      document.addEventListener("mousemove", resize);
     }
   };
 };
@@ -42,13 +42,12 @@ export const addMouseMoveListener = (
 export const runListeners = async (
   selector: string,
   MouseMoveListener: (e: MouseEvent) => void,
-  resize: (e: MouseEvent) => void
+  removeMouseMoveListener: () => void
 ) => {
   on("mousedown", selector, MouseMoveListener);
-  let removeMouseMoveListener = () => {
-    window.removeEventListener("mousemove", resize);
-  };
-  window.addEventListener("mouseup", removeMouseMoveListener);
+
+  document.addEventListener("mouseup", removeMouseMoveListener);
+  return;
 };
 
 export const createResizeDiv = async (

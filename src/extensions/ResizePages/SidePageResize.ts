@@ -6,16 +6,19 @@ import {
 } from "./util";
 
 export const SidePageResize = () => {
-  const sidePageCallback = (element: HTMLElement) => {
-    const resizeComponent =
-      "#roam-right-sidebar-content > div > div > div > div:last-child";
+  const resizeSidePageWidth = resize("--page-side-width");
+  const removeMouseMoveListener = () => {
+    document.removeEventListener("mousemove", resizeSidePageWidth);
+  };
+  const resizeComponent =
+    "#roam-right-sidebar-content > div > div > div > div:last-child";
 
-    const resizeSidePageWidth = resize("--page-side-width");
-
-    runListeners(
+  const sidePageCallback = async () => {
+    document.removeEventListener("mouseup", resizeSidePageWidth);
+    await runListeners(
       resizeComponent,
       addMouseMoveListener(resizeComponent, 25, resizeSidePageWidth),
-      resizeSidePageWidth
+      removeMouseMoveListener
     );
   };
 
